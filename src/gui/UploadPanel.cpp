@@ -16,17 +16,18 @@ UploadPanel::UploadPanel(wxPanel* parent)
 
   parent_ = parent;
   text_control_ = new wxTextCtrl(this, 101, wxT(""), wxPoint(110, 50),
-        wxSize(400, 200), wxTE_MULTILINE);    
+        wxSize(400, 200), wxTE_MULTILINE | wxTE_PROCESS_ENTER);    
 
   Connect(101, wxEVT_TEXT, wxCommandEventHandler(UploadPanel::OnTextUpdate));
+  Connect(101, wxEVT_TEXT_ENTER, wxCommandEventHandler(UploadPanel::LaunchListen));
 
   wxBoxSizer *hbox = new wxBoxSizer(wxHORIZONTAL);
   hbox->Add(text_control_, 0, wxEXPAND | wxALL, 5);
   
   /* text labels */
   text_label_ = new wxStaticText(this, 102, wxT("In the box below, enter a .pgn filepath or paste a game's raw pgn"), wxPoint(110, 30));
-  detection_label_ = new wxStaticText(this, 103, wxT("detected: "), wxPoint(250, 252));
-  detection_text_ = new wxStaticText(this, 104, wxT("nothing"), wxPoint(320, 252));
+  detection_label_ = new wxStaticText(this, 103, wxT("detected: "), wxPoint(240, 252));
+  detection_text_ = new wxStaticText(this, 104, wxT("nothing"), wxPoint(310, 252));
   warning_text_ = new wxStaticText(this, 106, wxT(""), wxPoint(140, 330));
 
   /* buttons */

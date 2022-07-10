@@ -3,6 +3,7 @@
 
 #include <wx/wx.h>
 #include <wx/panel.h>
+#include <wx/button.h>
 #include "GameStateManager.h"
 
 namespace chl {
@@ -13,6 +14,7 @@ public:
 
   void ClickGoBack(wxCommandEvent& event);
   void ClickSayNextMove(wxCommandEvent& event);
+  void ClickRepeatMove(wxCommandEvent& event);
   void ClickReturnToFirstMove(wxCommandEvent& event);
   void SetGameManagerMoveListInputFromUploadPanel(const std::string& text, const bool is_file_path);
 
@@ -21,6 +23,7 @@ public:
 
   /* buttons */
   wxButton* read_next_move_button_;
+  wxButton* repeat_move_button_;
   wxButton* return_to_before_first_move_button_;
   wxButton* back_button_;
 

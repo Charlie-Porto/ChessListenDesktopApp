@@ -19,7 +19,7 @@ namespace chl {
 
 const std::vector<char> move_indicating_chars = {
   'a', 'b', 'c', 'd', 'e', 'f',  'g',  'h',
-  'K', 'Q', 'R', 'B', 'N'};
+  'K', 'Q', 'R', 'B', 'N', 'O'};
 
 std::vector<size_t> getPositionsOfMovesInPgnString(const std::string& pgn) {
   
@@ -69,10 +69,10 @@ std::pair<size_t, size_t> getPositionsOfMovePairInPgnString(const size_t start_i
   }
 
   while (i < (i+10)) {
-    if (pgn[i] != ' ') { ++i; continue; }
     if (pgn[i] == ' ' || pgn[i] == '\n') {
       break;
     }
+    ++i;
   }
   
   while (i < (i+10)) {
