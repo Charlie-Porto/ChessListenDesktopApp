@@ -1,0 +1,12 @@
+[submodule "3rdparty/flite"]
+	path = 3rdparty/flite
+	url = git@github.com:festvox/flite.git
+[submodule "3rdparty/wxWidgets"]
+	path = 3rdparty/wxWidgets
+	url = git@github.com:wxWidgets/wxWidgets.git
+[submodule "3rdparty/libsndfile"]
+	path = 3rdparty/libsndfile
+	url = git@github.com:libsndfile/libsndfile.git
+[submodule "3rdparty/portaudio"]
+	path = 3rdparty/portaudio
+	url = git@github.com:PortAudio/portaudio.git

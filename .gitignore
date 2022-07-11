@@ -36,6 +36,19 @@
 .DS_Store?
 *.sh
 *.wav
+lib
+builds/*
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
 
 # VS code
 .vscode/*
@@ -50,4 +63,3 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
-
