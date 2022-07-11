@@ -1,3 +1,1 @@
-command to compile project (run from project root directory)
-
-$ g++ src/main.cpp -std=c++17 -o main.o 
+This project has been completed, and proper cross-platform build instructions (along with a full README) will be uploaded within the next few days.
